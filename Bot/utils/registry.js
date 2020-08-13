@@ -16,7 +16,7 @@ async function registerCommands(client, dir) {
                     let cmdModule = require(path.join(__dirname, dir, file));
                     let { aliases } = cmdModule;
                     client.commands.set(cmdName, cmdModule.run);
-                    console.log(`registered ${cmdName}`)
+                    console.log(`registered command: ${cmdName}`)
                 }
                 catch(err) {
                     console.log(`There was a problem: \n ${err}`);
@@ -24,6 +24,7 @@ async function registerCommands(client, dir) {
             }
         }
     }
+    console.log('\n')
 }
 
 async function registerEvents(client, dir) {
@@ -40,7 +41,7 @@ async function registerEvents(client, dir) {
                 try {
                     let eventModule = require(path.join(__dirname, dir, file));
                     client.on(eventName, eventModule.bind(null, client));
-                    console.log(`registered ${eventName}`)
+                    console.log(`registered event: ${eventName}`)
                 }
                 catch(err) {
                     console.log(`There was a problem: \n ${err}`);
@@ -48,6 +49,7 @@ async function registerEvents(client, dir) {
             }
         }
     }
+    console.log('\n')
 }
 
 module.exports = {
