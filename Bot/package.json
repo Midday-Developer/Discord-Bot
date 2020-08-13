@@ -1,0 +1,29 @@
+{
+  "name": "discord-bot",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ./index.js",
+    "dev": "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Midday-Developer/Discord-Bot.git"
+  },
+  "keywords": [
+    "Discord",
+    "Bot"
+  ],
+  "author": "Matthew Adcock",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Midday-Developer/Discord-Bot/issues"
+  },
+  "homepage": "https://github.com/Midday-Developer/Discord-Bot#readme"
+}
